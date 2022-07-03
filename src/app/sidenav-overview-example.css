@@ -9,6 +9,7 @@
 
 .mat-sidenav {
   width: 33%;
+  transition: all 0.4s;
 }
 
 .mat-sidenav__close {
