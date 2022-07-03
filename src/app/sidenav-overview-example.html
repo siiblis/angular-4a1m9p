@@ -1,12 +1,32 @@
+<mat-accordion> </mat-accordion>
+
 <mat-sidenav-container class="example-container" *ngIf="shouldRun">
-  <mat-sidenav #sidenav mode="side" position="end" opened
-    >Sidenav content</mat-sidenav
-  >
-  <mat-sidenav-content
-    ><p>
-      <button mat-button (click)="sidenav.toggle()">sidenav.toggle()</button>
-    </p></mat-sidenav-content
-  >
+  <mat-sidenav #sidenav1 class="mat-sidenav" mode="side" position="end" opened
+    >Sidenav 1<mat-icon class="mat-sidenav__close" (click)="sidenav1.close()"
+      >close</mat-icon
+    >
+  </mat-sidenav>
+  <mat-sidenav #sidenav2 class="mat-sidenav" mode="side" position="end" opened
+    >Sidenav 2<mat-icon class="mat-sidenav__close" (click)="sidenav2.close()"
+      >close</mat-icon
+    >
+  </mat-sidenav>
+  <mat-sidenav #sidenav3 class="mat-sidenav" mode="side" position="end" opened
+    >Sidenav 3<mat-icon class="mat-sidenav__close" (click)="sidenav3.close()"
+      >close</mat-icon
+    >
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <p>
+      <button mat-button (click)="sidenav1.toggle()">SIDENAV 1</button>
+    </p>
+    <p>
+      <button mat-button (click)="sidenav2.toggle()">SIDENAV 2</button>
+    </p>
+    <p>
+      <button mat-button (click)="sidenav3.toggle()">SIDENAV 3</button>
+    </p>
+  </mat-sidenav-content>
 </mat-sidenav-container>
 
 <!-- Copyright 2022 Google LLC. All Rights Reserved.
