@@ -9,7 +9,7 @@
 
 .mat-sidenav {
   width: 33%;
-  transition: all 0.4s;
+  /* transition: all 1s ease-in-out; */
 }
 
 .mat-sidenav__close {

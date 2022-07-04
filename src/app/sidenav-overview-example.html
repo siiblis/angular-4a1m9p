@@ -1,30 +1,51 @@
 <mat-accordion> </mat-accordion>
 
 <mat-sidenav-container class="example-container" *ngIf="shouldRun">
-  <mat-sidenav #sidenav1 class="mat-sidenav" mode="side" position="end" opened
-    >Sidenav 1<mat-icon class="mat-sidenav__close" (click)="sidenav1.close()"
+  <mat-sidenav #sidenav1 class="mat-sidenav" mode="side" position="end"
+    >Sidenav 1<mat-icon
+      class="mat-sidenav__close"
+      (click)="sidenav1.close(); sidebarOpenBool = false;"
       >close</mat-icon
     >
   </mat-sidenav>
-  <mat-sidenav #sidenav2 class="mat-sidenav" mode="side" position="end" opened
-    >Sidenav 2<mat-icon class="mat-sidenav__close" (click)="sidenav2.close()"
+  <mat-sidenav #sidenav2 class="mat-sidenav" mode="side" position="end"
+    >Sidenav 2<mat-icon
+      class="mat-sidenav__close"
+      (click)="sidenav2.close();  sidebarOpenBool = false;"
       >close</mat-icon
     >
   </mat-sidenav>
-  <mat-sidenav #sidenav3 class="mat-sidenav" mode="side" position="end" opened
-    >Sidenav 3<mat-icon class="mat-sidenav__close" (click)="sidenav3.close()"
+  <mat-sidenav #sidenav3 class="mat-sidenav" mode="side" position="end"
+    >Sidenav 3<mat-icon
+      class="mat-sidenav__close"
+      (click)="sidenav3.close() ;  sidebarOpenBool = false;"
       >close</mat-icon
     >
   </mat-sidenav>
   <mat-sidenav-content>
     <p>
-      <button mat-button (click)="sidenav1.toggle()">SIDENAV 1</button>
+      <button
+        mat-button
+        (click)="!sidebarOpenBool && sidenav1.open(); sidebarOpenBool=true;"
+      >
+        SIDENAV 1
+      </button>
     </p>
     <p>
-      <button mat-button (click)="sidenav2.toggle()">SIDENAV 2</button>
+      <button
+        mat-button
+        (click)="!sidebarOpenBool && sidenav2.open(); sidebarOpenBool=true;"
+      >
+        SIDENAV 2
+      </button>
     </p>
     <p>
-      <button mat-button (click)="sidenav3.toggle()">SIDENAV 3</button>
+      <button
+        mat-button
+        (click)="!sidebarOpenBool && sidenav3.open(); sidebarOpenBool=true;"
+      >
+        SIDENAV 3
+      </button>
     </p>
   </mat-sidenav-content>
 </mat-sidenav-container>

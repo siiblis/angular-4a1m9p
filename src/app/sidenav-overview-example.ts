@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
 
 /** @title Basic sidenav */
 @Component({
@@ -7,9 +7,11 @@ import {Component} from '@angular/core';
   styleUrls: ['sidenav-overview-example.css'],
 })
 export class SidenavOverviewExample {
-  shouldRun = /(^|.)(stackblitz|webcontainer).(io|com)$/.test(window.location.host);
+  shouldRun = /(^|.)(stackblitz|webcontainer).(io|com)$/.test(
+    window.location.host
+  );
+  sidebarOpenBool: Boolean = false;
 }
-
 
 /**  Copyright 2022 Google LLC. All Rights Reserved.
     Use of this source code is governed by an MIT-style license that
